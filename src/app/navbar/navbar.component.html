@@ -1,6 +1,13 @@
 <div class="navbar__container">
   <div class="navbar__left">
-    <button class="navbar__button"><i class="bi bi-list"></i></button>
+    <!-- <button
+      class="navbar__button"
+      data-bs-toggle="modal"
+      data-bs-target="#exampleModal"
+    >
+      <i class="bi bi-list"></i>
+    </button> -->
+    <app-pop-up-modal><i class="bi bi-list"></i></app-pop-up-modal>
   </div>
   <div class="navbar__middle">
     <button class="navbar__button" (click)="navLinkClickHandler('Home')">
@@ -23,6 +30,8 @@
     <img src="{{ currentUser.imageUrl }}" alt="userImage" class="navbar__img" />
   </div>
   <ul class="dropdown-menu">
-    <li><button class="dropdown-item" (click)="logOutHandler()">Logout</button></li>
+    <li>
+      <button class="dropdown-item" (click)="logOutHandler()">Logout</button>
+    </li>
   </ul>
 </div>

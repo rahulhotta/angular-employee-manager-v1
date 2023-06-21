@@ -14,5 +14,6 @@ export class AppComponent {
   );
   currentpage: any = "Home";
   title = 'angular-employee-manager-v1';
-  isLoggedIn: any = false;
+  isLoggedIn: any = true;
+  
 }

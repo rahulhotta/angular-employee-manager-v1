@@ -19,23 +19,26 @@ import { MdbTabsModule } from 'mdb-angular-ui-kit/tabs';
 import { MdbTooltipModule } from 'mdb-angular-ui-kit/tooltip';
 import { MdbValidationModule } from 'mdb-angular-ui-kit/validation';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ButtonComponent } from './UI/button/button.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { TableComponent } from './table/table.component';
 import { CardsListComponent } from './cards-list/cards-list.component';
 import { GraphComponent } from './graph/graph.component';
 import { HomeComponent } from './home/home.component';
-
+import { PopUpModalComponent } from './pop-up-modal/pop-up-modal.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { EmployeeFormComponent } from './employee-form/employee-form.component';
+import { EmployeeService } from './employee.service';
 @NgModule({
   declarations: [
     AppComponent,
     LoginPageComponent,
-    ButtonComponent,
     NavbarComponent,
     TableComponent,
     CardsListComponent,
     GraphComponent,
     HomeComponent,
+    PopUpModalComponent,
+    EmployeeFormComponent,
   ],
   imports: [
     BrowserModule,
@@ -55,7 +58,8 @@ import { HomeComponent } from './home/home.component';
     MdbTabsModule,
     MdbTooltipModule,
     MdbValidationModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]

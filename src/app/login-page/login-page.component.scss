@@ -6,6 +6,9 @@
     width: 100vw;
     height: 100vh;
     background-color: var(--primary-bg-color);
+    .login__error{
+        color: red;
+    }
     .loginPage__form{
         display: flex;
         align-items: center;

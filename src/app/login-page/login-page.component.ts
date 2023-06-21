@@ -35,9 +35,10 @@ export class LoginPageComponent {
     this.ash,
   ];
 
-  
+  public loginErrorMessage: any = "";
   public currentUserEmail: any = '';
   public currentUserPassword: any = '';
+
   private loginUser() {
     this.userCredList.every(user => {
       if(user.email === this.currentUserEmail && user.password === this.currentUserPassword){
@@ -48,7 +49,7 @@ export class LoginPageComponent {
         return
       }
       this.userLoginStatus = false
-      
+      this.loginErrorMessage="Invalid Email or Password!!"
     });
   }
   userLoginStatus: any = false ;
