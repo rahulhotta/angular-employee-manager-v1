@@ -1,0 +1,28 @@
+<div class="navbar__container">
+  <div class="navbar__left">
+    <button class="navbar__button"><i class="bi bi-list"></i></button>
+  </div>
+  <div class="navbar__middle">
+    <button class="navbar__button" (click)="navLinkClickHandler('Home')">
+      Home
+    </button>
+    <button class="navbar__button" (click)="navLinkClickHandler('Cards')">
+      Cards
+    </button>
+    <button class="navbar__button" (click)="navLinkClickHandler('Graph')">
+      Graph
+    </button>
+  </div>
+  <div
+    class="navbar__right"
+    class="btn btn-secondary dropdown-toggle"
+    type="button"
+    data-bs-toggle="dropdown"
+    aria-expanded="false"
+  >
+    <img src="{{ currentUser.imageUrl }}" alt="userImage" class="navbar__img" />
+  </div>
+  <ul class="dropdown-menu">
+    <li><button class="dropdown-item" (click)="logOutHandler()">Logout</button></li>
+  </ul>
+</div>
