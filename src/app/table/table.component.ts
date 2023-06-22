@@ -15,7 +15,7 @@ export class TableComponent {
   deleteHandler(id:any){
     this.employeeService.deleteDataFromEmpList(id)
   }
-  editHandler(id:any){
-    
+  editHandler(id:any,editedData:any){
+    this.employeeService.editDataInEmpList(id,editedData)
   }
 }

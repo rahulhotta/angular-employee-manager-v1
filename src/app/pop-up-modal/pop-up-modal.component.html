@@ -8,8 +8,12 @@
     ></button>
   </div>
   <div class="modal-body">
-    <app-employee-form [modal]="modal"></app-employee-form>	
-	  
+    <app-employee-form
+      [modal]="modal"
+      [formType]="formType"
+      [empId]="empId"
+	  (editedEmpDataEmitter)="catchEditedData($event)"
+    ></app-employee-form>
   </div>
 </ng-template>
 

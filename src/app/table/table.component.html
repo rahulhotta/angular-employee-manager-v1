@@ -13,7 +13,7 @@
     <td>{{ employee.empDOJ }}</td>
     <td><img src="{{ employee.empImage }}" alt="employee" /></td>
     <td>
-      <app-pop-up-modal  (click)="editHandler(employee.empId)">
+      <app-pop-up-modal  [formType]="'Edit'" [empId]="employee.empId" (editedDataEventEmmiter)="editHandler(employee.empId,$event)">
         <button class="emp__table_btn">
           <i class="bi bi-pencil-square" ></i>
         </button>

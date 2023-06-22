@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import {
   ModalDismissReasons,
   NgbDatepickerModule,
@@ -11,7 +11,10 @@ import { EmployeeService } from '../employee.service';
   styleUrls: ['./pop-up-modal.component.scss'],
 })
 export class PopUpModalComponent {
-  @Input() btnText: any;
+  @Input() formType: any;
+  @Input() empId: any;
+  @Output() editedDataEventEmmiter = new EventEmitter<any>();
+
   closeResult = '';
   private getDismissReason(reason: any): string {
     if (reason === ModalDismissReasons.ESC) {
@@ -28,6 +31,7 @@ export class PopUpModalComponent {
   ) {}
 
   open(content: any) {
+    console.log("The emp id in pop-up-modal is: ",this.empId)
     this.modalService
       .open(content, { ariaLabelledBy: 'modal-basic-title' })
       .result.then(
@@ -40,6 +44,9 @@ export class PopUpModalComponent {
       );
   }
 
+  catchEditedData(event:any){
+    this.editedDataEventEmmiter.emit(event)
+  }
   // form ts
 
  
