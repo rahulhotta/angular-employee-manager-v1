@@ -1,7 +1,47 @@
 <form class="empForm__container" novalidate (submit)="addHandler()">
-    <input type="text" placeholder="Employee Name" class="empForm__input" name="emp_name_input" [(ngModel)]="currentEmp.empName">
-    <input type="date" placeholder="Employee D.O.J" name="emp_date_input" class="empForm__input" [(ngModel)]="currentEmp.empDOJ">
-    <input type="text" placeholder="Employee project" name="emp_project_input" class="empForm__input" [(ngModel)]="currentEmp.empProject">
-    <input type="file" class="empForm__input" name="emp_photo_input" [(ngModel)]="currentEmp.empImage">
-    <button type="submit" class="empForm__btn">Add</button>
+  <input
+    type="text"
+    placeholder="Employee Name"
+    class="empForm__input"
+    name="emp_name_input"
+    [(ngModel)]="currentEmp.empName"
+  />
+  <input
+    type="date"
+    placeholder="Employee D.O.J"
+    name="emp_date_input"
+    class="empForm__input"
+    [(ngModel)]="currentEmp.empDOJ"
+  />
+  <input
+    type="text"
+    placeholder="Employee project"
+    name="emp_project_input"
+    class="empForm__input"
+    [(ngModel)]="currentEmp.empProject"
+  />
+  <input
+    type="file"
+    class="empForm__input"
+    name="emp_photo_input"
+    [(ngModel)]="currentEmp.empImage"
+  />
+  <div class="empForm__btns__container">
+    <button
+      type="submit"
+      class="empForm__btn"
+    >
+      Add
+    </button>
+    <!-- <ng-template #editBtn> -->
+      <!-- <button *ngIf="isEdited" type="submit" class="empForm__btn">Edit</button> -->
+    <!-- </ng-template> -->
+    <button
+      type="button"
+      class="empForm__btn"
+      (click)="modal.close('Save click')"
+    >
+      Close
+    </button>
+  </div>
 </form>

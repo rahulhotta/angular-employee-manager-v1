@@ -1,4 +1,5 @@
 import { Component,Input, Output, EventEmitter } from '@angular/core';
+import { EmployeeService } from '../employee.service';
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
@@ -16,4 +17,6 @@ export class NavbarComponent {
   logOutHandler(){
     this.logOutEmmiter.emit(false)
   }
+  constructor(private employeeService: EmployeeService){}
+  
 }

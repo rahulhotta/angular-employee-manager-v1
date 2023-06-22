@@ -6,6 +6,5 @@ import { Component,Input } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
-  @Input() currentPage: any;
-  
+  @Input() currentPage: any;  
 }

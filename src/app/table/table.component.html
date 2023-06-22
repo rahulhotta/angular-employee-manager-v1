@@ -1,4 +1,6 @@
-<table class="table__container">
+<h1 *ngIf="allEmployees.length === 0; else table">You dont have any data</h1>
+<ng-template #table>
+<table class="table__container" >
   <th>Name</th>
   <th>Project</th>
   <th>D.O.J</th>
@@ -11,14 +13,17 @@
     <td>{{ employee.empDOJ }}</td>
     <td><img src="{{ employee.empImage }}" alt="employee" /></td>
     <td>
-      <button class="emp__table_btn">
-        <i class="bi bi-pencil-square" ></i>
-      </button>
+      <app-pop-up-modal  (click)="editHandler(employee.empId)">
+        <button class="emp__table_btn">
+          <i class="bi bi-pencil-square" ></i>
+        </button>
+      </app-pop-up-modal>     
     </td>
     <td>
-      <button class="emp__table_btn">
+      <button class="emp__table_btn" (click)="deleteHandler(employee.empId)">
         <i class="bi bi-trash"></i>
       </button>
     </td>
   </tr>
 </table>
+</ng-template>

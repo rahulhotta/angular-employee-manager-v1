@@ -9,8 +9,13 @@ import { EmployeeService } from '../employee.service';
 export class TableComponent {
   constructor(private employeeService :  EmployeeService){}
   allEmployees:any = this.employeeService.employeeList;
-   
   ngOnInit(){
     console.log("All employees are",this.allEmployees)
+  }
+  deleteHandler(id:any){
+    this.employeeService.deleteDataFromEmpList(id)
+  }
+  editHandler(id:any){
+    
   }
 }
