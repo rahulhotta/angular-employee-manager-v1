@@ -1,5 +1,6 @@
 .table__container{
     border: 2px solid var(--secondary-bg-color);
+    box-shadow: var(--primary-box-shadow);
     th,td{
         padding: 10px 20px;
         border: 2px solid black;

@@ -28,6 +28,8 @@ import { PopUpModalComponent } from './pop-up-modal/pop-up-modal.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { EmployeeFormComponent } from './employee-form/employee-form.component';
 import { EmployeeService } from './employee.service';
+// import * as echarts from 'echarts';
+// import { NgxEchartsModule } from 'ngx-echarts';
 @NgModule({
   declarations: [
     AppComponent,
@@ -59,7 +61,10 @@ import { EmployeeService } from './employee.service';
     MdbTooltipModule,
     MdbValidationModule,
     BrowserAnimationsModule,
-    NgbModule
+    NgbModule,
+    // NgxEchartsModule.forRoot({
+    //   echarts
+    // })
   ],
   providers: [],
   bootstrap: [AppComponent]

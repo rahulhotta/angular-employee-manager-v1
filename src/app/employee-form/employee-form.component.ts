@@ -17,12 +17,13 @@ export class EmployeeFormComponent {
   @Input('empId') id: any;
   @Input() formType: any;
   @Output() editedEmpDataEmitter = new EventEmitter<any>() ;
+
   editedEmployeeData = {
     empId: '',
     empName: '',
     empDOJ: '',
     empProject: '',
-    empImage: '',
+    empImage: ''
   }
   
   ngOnInit(){
